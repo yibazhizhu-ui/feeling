@@ -1,4 +1,4 @@
-// Gently deform different parts of the supplied photograph at 12 fps.
+// Deform palms and water independently at 12 fps, with slow, visible swaying.
 // The underlying <img> remains visible if WebGL is unavailable.
 export function createShoreScene(canvas, reducedMotion) {
   let gl;
@@ -13,10 +13,12 @@ export function createShoreScene(canvas, reducedMotion) {
       uv=(uv-.5)*u_cover+.5;
       float palms=1.-smoothstep(.53,.78,uv.y);
       float sea=smoothstep(.74,.84,uv.y);
-      uv.x+=palms*(sin(u_time*.65+uv.y*6.)*.0035+sin(u_time*.93+uv.x*8.)*.0014);
-      uv.y+=palms*sin(u_time*.74+uv.x*9.)*.0014;
-      uv.y+=sea*sin(uv.y*100.-u_time*1.5+uv.x*5.)*.0018;
-      uv.x+=sea*sin(uv.y*65.-u_time*.9)*.0013;
+      const float palmStrength=2.4;
+      const float waveStrength=1.8;
+      uv.x+=palms*palmStrength*(sin(u_time*.65+uv.y*6.)*.0035+sin(u_time*.93+uv.x*8.)*.0014);
+      uv.y+=palms*palmStrength*sin(u_time*.74+uv.x*9.)*.0014;
+      uv.y+=sea*waveStrength*sin(uv.y*100.-u_time*1.5+uv.x*5.)*.0018;
+      uv.x+=sea*waveStrength*sin(uv.y*65.-u_time*.9)*.0013;
       vec3 color=texture2D(u_image,clamp(uv,.002,.998)).rgb;
       float light=exp(-pow((uv.y-.65)*7.,2.))*(.012+.012*sin(u_time*.7+uv.x*4.));
       color+=vec3(1.,.78,.4)*light;
