@@ -1,5 +1,7 @@
 # feeling
 
+[打开网页](https://yibazhizhu-ui.github.io/feeling/) · [GitHub 仓库](https://github.com/yibazhizhu-ui/feeling)
+
 一个先感受、再记录的手机网页 App。原生 HTML / CSS / JavaScript，无第三方运行依赖。
 
 **当前状态：本机记录版本。账号、云数据库和多设备同步尚未接入；不会把本机记录上传到 GitHub。**

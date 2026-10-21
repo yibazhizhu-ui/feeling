@@ -6,8 +6,8 @@
 
 | 用途 | 服务 | 建议位置 | 当前状态 |
 | --- | --- | --- | --- |
-| 源代码 | GitHub 公开仓库 | GitHub 托管 | 等待仓库创建和上传确认 |
-| 网页 | GitHub Pages | GitHub 分发网络，不保证固定地区 | 发布工作流已准备，尚未验证上线 |
+| 源代码 | GitHub 公开仓库 | GitHub 托管 | [已公开](https://github.com/yibazhizhu-ui/feeling) |
+| 网页 | GitHub Pages | GitHub 分发网络，不保证固定地区 | [已配置 Pages](https://yibazhizhu-ui.github.io/feeling/)，部署结果见仓库 Actions |
 | 登录 | Supabase Auth | 与所选 Supabase 项目配套 | 未创建 |
 | 主数据库 | Supabase 托管 PostgreSQL | AWS 新加坡 `ap-southeast-1` | 建议地区，尚未实际选定 |
 | 备份 | 单独的私有、加密备份目的地 | 上线前选定并记录 | 未配置 |
