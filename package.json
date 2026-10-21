@@ -1,0 +1,15 @@
+{
+  "name": "feeling",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A quiet, mobile-first mood journal with an atmospheric shoreline.",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node --test",
+    "build": "node scripts/build.mjs"
+  }
+}

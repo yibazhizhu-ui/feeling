@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#202c40"/><stop offset=".46" stop-color="#63717b"/><stop offset=".75" stop-color="#d0ad85"/><stop offset="1" stop-color="#f5dda2"/></linearGradient>
+    <linearGradient id="sea" x2="0" y2="1"><stop stop-color="#9b9280"/><stop offset=".35" stop-color="#56696d"/><stop offset="1" stop-color="#182d37"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#fff4c8" stop-opacity=".9"/><stop offset=".35" stop-color="#f2d498" stop-opacity=".45"/><stop offset="1" stop-color="#f2d498" stop-opacity="0"/></radialGradient>
+    <linearGradient id="reflection" x2="0" y2="1"><stop stop-color="#f8dfad" stop-opacity=".65"/><stop offset="1" stop-color="#f8dfad" stop-opacity="0"/></linearGradient>
+    <filter id="haze"><feGaussianBlur stdDeviation="14"/></filter>
+    <g id="palm" fill="#152b2d">
+      <path d="M0 0C-23 130-25 280-5 470H21C-14 275-6 130 9 0Z"/>
+      <path d="M5 0C-60-98-160-105-218-51C-138-69-62-45 5 0ZM5 0C-86-42-173-7-197 78C-126 13-64-1 5 0ZM5 0C-52 20-108 99-82 176C-61 106-24 48 5 0ZM5 0C34-99 123-143 202-112C113-100 59-52 5 0ZM5 0C108-78 203-35 229 39C145-9 77-14 5 0ZM5 0C83 9 154 87 146 157C105 85 64 48 5 0Z"/>
+    </g>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1200v870H0z"/>
+  <ellipse cx="660" cy="740" rx="430" ry="340" fill="url(#halo)"/>
+  <circle cx="660" cy="750" r="71" fill="#fff0bd" opacity=".85"/>
+  <g fill="#394855" opacity=".2" filter="url(#haze)"><path d="M-50 360Q200 260 480 370T1250 300V420Q890 480 650 420T-50 470Z"/><path d="M-50 590Q330 500 550 600T1250 560V605Q900 680 600 635T-50 650Z"/></g>
+  <path fill="url(#sea)" d="M0 825Q600 817 1200 825v375H0z"/>
+  <path d="M635 825h50l120 375H510Z" fill="url(#reflection)" filter="url(#haze)"/>
+  <g fill="none" stroke="#ead4aa" stroke-width="2" opacity=".24"><path d="M100 864Q350 849 570 865T1090 857M220 903Q390 885 650 901T1190 895M-40 944Q230 918 490 940T1000 935M190 990Q410 970 610 992T1220 975M-10 1044Q240 1020 500 1045T1110 1031M170 1104Q460 1085 730 1103T1250 1096"/></g>
+  <path d="M0 1110Q160 1060 275 1115T580 1170Q850 1185 1200 1130V1200H0Z" fill="#14262b" opacity=".7"/>
+  <use href="#palm" transform="translate(230 360) rotate(-13) scale(1.7)"/>
+  <use href="#palm" transform="translate(1100 210) rotate(20) scale(1.85)"/>
+  <use href="#palm" transform="translate(940 640) rotate(9) scale(.88)" opacity=".65"/>
+</svg>
