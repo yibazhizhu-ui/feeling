@@ -13,6 +13,3 @@ exports/
 .DS_Store
 Thumbs.db
 .openai/
-
-# Private reference photograph: never publish.
-assets/shore.jpg

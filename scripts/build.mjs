@@ -12,7 +12,7 @@ await mkdir(output, { recursive: true });
 // Explicit allowlist: never deploy repository metadata, credentials or user exports.
 const publicFiles = [
   'index.html',
-  'assets/shore.svg',
+  'assets/shore.jpg',
   'assets/icon.svg',
   'src/app.js',
   'src/styles.css',

@@ -1,4 +1,4 @@
-// Gently deform different parts of the original SVG illustration at 12 fps.
+// Gently deform different parts of the supplied photograph at 12 fps.
 // The underlying <img> remains visible if WebGL is unavailable.
 export function createShoreScene(canvas, reducedMotion) {
   let gl;
@@ -66,7 +66,7 @@ export function createShoreScene(canvas, reducedMotion) {
     gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,photo);
     loaded = true;canvas.classList.add('ready');
   };
-  photo.src = new URL('../assets/shore.svg', import.meta.url).href;
+  photo.src = new URL('../assets/shore.jpg', import.meta.url).href;
   canvas.addEventListener('webglcontextlost', event => { event.preventDefault();active = false;cancelAnimationFrame(frame);canvas.classList.remove('ready'); });
   return { start() { if (!active) { active = true;frame = requestAnimationFrame(draw); } }, stop() { active = false;cancelAnimationFrame(frame); } };
 }
